@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Matt's Card Game</title>
+		<style>
+			html, body {
+				height: 100%;
+			}
+
+			body {
+				background-color: #000000;
+				margin: 0;
+				font-family: Arial;
+				overflow: hidden;
+			}
+
+			a {
+				color: #ffffff;
+			}
+
+			#info {
+				position: absolute;
+				width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				font-weight: bold;
+				text-align: center;
+				z-index: 1;
+			}
+
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+
+			.card {
+				width: 250px;
+				height: 350px;
+				box-shadow: 0px 0px 20px 5px rgba(0,255,255,0.5);
+				border: 2px solid rgba(127,255,255,0.25);
+				cursor: default;
+				transition: all 1s linear;
+				background-color: rgba(0,255,255,0.5);
+				
+				-webkit-transition: all 2s linear;
+			    -o-transition: all 2s linear;
+			    -moz-transition: all 2s linear;
+			    -ms-transition: all 2s linear;
+			    -kthtml-transition: all 2s linear;
+			    transition: all 2s linear;
+			}
+
+			.card:hover {
+				box-shadow: 0px 0px 20px 5px rgba(255,255,255,0.5);
+				border: 2px solid rgba(127,255,255,0.75);
+				transition: all .5s linear;
+				background-color: rgba(124,0,124,0.75);
+				-webkit-transition: all .5s linear;
+			    -o-transition: all .5s linear;
+			    -moz-transition: all .5s linear;
+			    -ms-transition: all .5s linear;
+			    -kthtml-transition: all .5s linear;
+			}
+
+			.card .number {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				font-size: 20px;
+				color: rgba(127,255,255,0.75);
+			}
+			
+			.card .name {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				font-size: 20px;
+				color: rgba(127, 255, 255, 0.75);
+			}
+			
+			.card .symbol {
+				position: absolute;
+				top: 40px;
+				width: 100%;
+				font-size: 70px;
+				text-align: center;
+				color: rgba(255,255,255,0.75);
+				font-weight: bold;
+
+				-webkit-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+				-moz-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+				-o-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+				-ms-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+				filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+			}
+
+			.card .details {
+				position: absolute;
+				top: 125px;
+				width: 100%;
+				font-size: 18px;
+				text-align: center;
+				color: rgba(127,255,255,0.75);
+			}
+
+			button {
+				color: rgba(127,255,255,0.75);
+				background: transparent;
+				outline: 1px solid rgba(127,255,255,0.75);
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: rgba(0,255,255,0.5);
+			}
+			button:active {
+				color: #000000;
+				background-color: rgba(0,255,255,0.75);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<script src="js/three/three.min.js"></script>
+		<script src="js/three/tween.min.js"></script>
+		<script src="js/three/TrackballControls.js"></script>
+		<script src="js/three/CSS3DRenderer.js"></script>
+		<script src="js/jquery/jquery-1.8.3.min.js"></script>
+
+		<script src="js/omnitile/GameArea.js"></script>
+		<div id="info">
+			Matt's Card Game
+		</div>
+		<div id="container">
+			
+		</div>
+		<div id="menu">
+			<button id="layout1">LAYOUT 1</button>
+			<button id="layout2">LAYOUT 2</button>
+			<button id="layout3">FLIP</button>
+			<button id="layout4">GRID</button>
+
+		<script src="js/demo.js"></script>
+	</body>
+</html>
